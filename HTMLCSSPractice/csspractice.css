@@ -1,0 +1,29 @@
+body{
+    padding-top: 20;
+    background-color: darkslategrey;    
+}
+div{
+    width: 10%;
+    height: 10%;
+}
+.img2{
+    height: 20%;
+}
+footer{
+    font-style: italic;
+    left: 0;
+    bottom: 0;
+    height: 5%;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    background-color: white;
+}
+.wiki{
+    color: black;
+    float: right;
+}
+table{
+    margin: 10;
+    background: white;
+}
