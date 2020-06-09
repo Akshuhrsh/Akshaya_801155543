@@ -1,0 +1,58 @@
+.topright{
+    float: right;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: coral;
+    color: black;
+    text-align: center; 
+}
+
+.imageContainer{
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100;
+}
+.inputContainer{
+    font-weight: bold;
+    text-align: center;
+    padding-top: 40;
+}
+.button{        
+    font-weight: bold;
+    font-size: 20;
+}
+table{  
+    margin: 2;
+    background-color: lightcyan;  
+    text-align: center;
+    width: 100%;
+    height: 10%;
+}
+.operationresultarea{
+    background-color: beige;
+    width: 100%;
+    height: 40%;
+}
+.bodybackground{
+    background-color: beige;
+}
+.updatestyle{
+    margin: 10;
+    background-color: lightcyan;
+    text-align: center;
+    padding-top: 200;
+}
+.readpost{
+    text-align: center;
+    padding-top: 40; 
+    background-color: beige;
+}
+.blogcontent{
+    width: 100%;
+    height: 80%;   
+}
