@@ -1,0 +1,30 @@
+{
+  "name": "akshaya_801155543",
+  "version": "1.0.0",
+  "description": "Blog App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akshuhrsh/Akshaya_801155543.git"
+  },
+  "keywords": [
+    "blog",
+    "post",
+    "users"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akshuhrsh/Akshaya_801155543/issues"
+  },
+  "homepage": "https://github.com/Akshuhrsh/Akshaya_801155543#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "sqlite3": "^4.2.0"
+  }
+}
