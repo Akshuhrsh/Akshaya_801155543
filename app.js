@@ -1,14 +1,8 @@
 var express = require('express');
-const sqllite = require('sqlite3').verbose();
 
-let db = new sqllite.Database('blog_db', (err) => {
-    if (err) {
-      return console.error(err.message);
-    }
-    console.log('Connected to the in-memory SQlite database.');
-  });
 var postController = require('./controllers/postController');
 var indexController = require('./controllers/indexController');
+var addpostController = require('./controllers/addpostController');
 
 var app = express();
 
@@ -18,11 +12,13 @@ app.set('view engine','ejs');
 //static files
 app.use('/assets',express.static('assets'));
 app.use('/JAVASCRIPT',express.static('JAVASCRIPT'));
+app.use('/AJAX',express.static('AJAX'));
 
 //fire contollers
 
 postController(app);
 indexController(app);
+addpostController(app);
 
 //listen to port
 app.listen(3000);
