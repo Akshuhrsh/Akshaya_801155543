@@ -1,12 +1,17 @@
 <html lang="en">  
     <head>
         <link rel="stylesheet" type="text/css" href="/assets/CSS/styling1.css">
-        <title>Add Post Page</title>  
+        <title>Post Page</title>  
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <base href="/">      
     </head>
     <body class="bodybackground">
-        <form >
+        <div>
+            <h2 class="readpost"><%= blog.title %></h2>
+        </br>
+            <p class="readpost"><%= blog.desc %></p>
+        </div>
+        <!-- <form >
             <div class="inputContainer">
             <label><b>Post Title</b></label></br>
             </br>
@@ -22,7 +27,7 @@
 
             </div>
             
-        </form>
+        </form> -->
 
     </body>
 </html>
