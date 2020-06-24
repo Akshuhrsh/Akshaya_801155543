@@ -2,6 +2,7 @@ var bodyParser  = require('body-parser');
 
 var urlencodedParser = bodyParser.urlencoded({extended: false});
 
+
 var blogId;
 
 module.exports = function(app,db){
@@ -25,11 +26,15 @@ app.get('/updatepost',function(req,res){
 app.post('/updatepost',urlencodedParser, function(req,res){        
    db.run('Update BLOG set Title = ? , Desc = ? where id= ?',[req.body.title,req.body.desc,blogId],(err)=>{
     if(err){
-        return console.log(err.message);
-    }   
-   return err;
-});
-
+        console.log("Failure");
+        // alert("Failure");
+        res.body ="Failure";
+    } else{
+        console.log("Success");
+        // alert("Success");
+       res.body = "Success";
+    }
+    });
 });
 // app.put('/updatepost',function(req,res){
 //    // res.render('post');

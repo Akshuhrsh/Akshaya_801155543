@@ -6,6 +6,8 @@ var indexController = require('./controllers/indexController');
 var addpostController = require('./controllers/addpostController');
 var listpostController = require('./controllers/listpostController');
 var updatepostController = require('./controllers/updatepostController');
+var deletepostController = require('./controllers/deletepostController');
+
 
 // db connection creation
 
@@ -33,6 +35,7 @@ indexController(app,db);
 addpostController(app,db);
 listpostController(app,db);
 updatepostController(app,db);
+deletepostController(app,db);
 
 //listen to port
 app.listen(3000);

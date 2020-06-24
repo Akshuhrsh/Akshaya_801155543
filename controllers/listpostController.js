@@ -10,7 +10,7 @@ module.exports = function(app,db){
               throw err;
             }
             rows.forEach((row) => {                
-             var blog= {Id: row.Id,title:row.Title,desc:row.Desc,viewlink:'post?id='+row.Id,editlink:'updatepost?id='+row.Id};
+             var blog= {Id: row.Id,title:row.Title,desc:row.Desc,viewlink:'post?id='+row.Id,editlink:'updatepost?id='+row.Id,deletelink:'deletepost?id='+row.Id};
               data.push(blog);
             });
             res.render('list_post',{blogs: data});
