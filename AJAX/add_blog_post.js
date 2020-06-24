@@ -11,9 +11,9 @@ $(document).ready(function(){
           type: 'POST',
           url: '/addpost',
           data: blog,
-          success: function(data){
+          success: function(resdata){
             //do something with the data via front-end framework
-            
+            console.log("DATA"+resdata);            
           }
         });
   

@@ -1,18 +1,8 @@
 var bodyParser  = require('body-parser');
 
-const sqllite = require('sqlite3').verbose();
-
-let db = new sqllite.Database('nodejsdb.db', (err) => {
-    if (err) {
-      return console.error(err.message);
-    }
-    console.log('Connected to the in-memory SQlite database.');
-  });
-
-
 var urlencodedParser = bodyParser.urlencoded({extended: false});
 
-module.exports = function(app){
+module.exports = function(app,db){
 
 app.get('/post',function(req,res){
 var blog={};

@@ -1,19 +1,10 @@
-const sqllite = require('sqlite3').verbose();
-
-let db = new sqllite.Database('nodejsdb.db', (err) => {
-    if (err) {
-      return console.error(err.message);
-    }
-    console.log('Connected to the in-memory SQlite database.');
-  });
-
   let sql = `SELECT Id,Title,Desc FROM BLOG
            ORDER BY id DESC LIMIT 4`;
 
-module.exports = function(app){
+module.exports = function(app,db){
     var data=[];
 
-    app.get('/index',function(req,res){
+    app.get('/index',function(req,res){        
         db.all(sql, [], (err, rows) => {
             if (err) {
               throw err;

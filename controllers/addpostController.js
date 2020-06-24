@@ -1,12 +1,3 @@
-const sqllite = require('sqlite3').verbose();
-
-let db = new sqllite.Database('nodejsdb.db', (err) => {
-    if (err) {
-      return console.error(err.message);
-    }
-    console.log('Connected to the in-memory SQlite database.');
-  });
-
 var bodyParser  = require('body-parser');
 
 var urlencodedParser = bodyParser.urlencoded({extended: false});
@@ -15,7 +6,7 @@ var urlencodedParser = bodyParser.urlencoded({extended: false});
 //var data = [{title: 'Blog 1', desc: 'Desc1 goes here'},{title: 'Blog 2', desc: 'Desc2 goes here'},{title: 'Blog 3', desc: 'Desc3 goes here'}];
 
 
-module.exports = function(app){
+module.exports = function(app,db){
 
 app.get('/addpost',function(req,res){
     res.render('add_post');

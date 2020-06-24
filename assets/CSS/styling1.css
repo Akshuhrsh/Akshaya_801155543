@@ -36,7 +36,9 @@ table{
 .operationresultarea{
     background-color: beige;
     width: 100%;
-    height: 40%;
+    height: 50%;
+    text-align: center;
+    overflow: auto;    
 }
 .bodybackground{
     background-color: beige;
@@ -96,7 +98,8 @@ table{
     border: 1px solid #000;
     border-color: black;
     text-align: center;
-    width: 100%;            
+    width: 100%; 
+    height: 20%;           
   }
   .slide{
     margin-top: 10;

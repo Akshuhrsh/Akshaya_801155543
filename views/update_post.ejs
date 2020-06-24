@@ -1,0 +1,29 @@
+<html lang="en">  
+    
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/AJAX/update_blog_post.js"></script>
+        <link rel="stylesheet" type="text/css" href="/assets/CSS/styling1.css">
+        <title>Update Post Page</title>  
+        <meta name="viewport" content="width=device-width, initial-scale=1">      
+    </head>
+    <body class="bodybackground">
+        <form>
+            <div class="inputContainer">
+            <label><b>Post Title</b></label></br>
+            </br>
+            <input type="text" value="<%=blog.title %>">
+    </br>
+</br>
+            <label><b>Post Description</b></label>
+            </br>
+            <textarea rows="30" cols="100"><%=blog.desc %></textarea>
+            </br>
+        </br>
+            <button class="button" type="submit"><b>Update Post</b></button>
+            </div>
+            
+        </form>
+
+    </body>
+</html>
