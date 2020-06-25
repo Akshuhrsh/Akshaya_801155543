@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 $(document).ready(function(){
   console.log("inside ajax call");
     $('form').on('submit', function(){        

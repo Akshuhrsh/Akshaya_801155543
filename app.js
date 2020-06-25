@@ -10,6 +10,9 @@ var listpostController = require('./controllers/listpostController');
 var updatepostController = require('./controllers/updatepostController');
 var deletepostController = require('./controllers/deletepostController');
 
+var adduserController = require('./controllers/adduserController');
+var listuserController = require('./controllers/listuserController');
+
 // db connection creation
 
 let db = new sqllite.Database('nodejsdb.db', (err) => {
@@ -38,7 +41,11 @@ listpostController(app,db);
 updatepostController(app,db);
 deletepostController(app,db);
 
+adduserController(app,db);
+listuserController(app,db);
 
 //listen to port
-app.listen(3000);
-console.log('You are listening to port 3000');
+var HTTP_PORT = 3000;
+app.listen(HTTP_PORT, () => {
+  console.log("Server running on port %PORT%".replace("%PORT%",HTTP_PORT))
+});
