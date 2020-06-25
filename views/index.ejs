@@ -1,0 +1,50 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/assets/CSS/styling1.css">
+        <!-- <link rel="stylesheet" type="text/css" href="CSS\styling1.css"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Blog</title> 
+        <script src="JAVASCRIPT/font_resizer.js"></script> 
+        <script src="JAVASCRIPT/slidestartstop.js"></script> 
+        <script src="JAVASCRIPT/style_switcher.js"></script>   
+    </head>
+    <body>
+        <nav class="topright">
+        <a class="anchor" onclick=fontResizer()>Font Resizer</a>        
+        <!-- <a class="anchor" onclick=styleSwitcher()>Style Switcher</a> -->
+        <a href=admin\login.html>Admin Login</a>            
+        </nav>
+    </br> 
+    <div>
+        <div class="welcometxt" id="welcometxt">Welcome to my blog</div>
+        <img id="mainImage" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.5jiU3yB4FUKVQjlw_OthgQHaEK%26pid%3DApi&f=1" alt="Background Image goes here" width="1510" height="300"/>
+        <button id="stylebtn1" class="stylebutton1" onclick="styleSwitcher1()">style1</button>
+        <button id="stylebtn2" class="stylebutton2" onclick="styleSwitcher2()">style2</button>
+        <button id="stylebtn3" class="stylebutton3" onclick="styleSwitcher3()">style3</button>
+    </div>       
+<div class="slide">
+    <button onclick="startSlideshow()">Play Slides</button>
+    <button onclick="stopSlideshow()">Stop Slides</button>
+</div>
+<div>
+    <article class="blogarticle">
+        <a href="<%=blogs[0].link %>"><%= blogs[0].title %></a> 
+        <p id="para1"><%= blogs[0].desc %></p>
+     </article></br>
+     <article class="blogarticle">
+         <a href="<%=blogs[1].link %>"><%= blogs[1].title %></a>     
+         <p><%= blogs[1].desc %></p>    
+     </article></br>
+     <article class="blogarticle">
+         <a href="<%=blogs[2].link %>"><%= blogs[2].title %></a>
+         <p><%= blogs[2].desc %></p>
+     </article></br>
+     <article class="blogarticle">
+         <a href="<%=blogs[3].link %>"><%= blogs[3].title %></a> 
+         <p><%= blogs[3].desc %></p>
+     </article>
+</div>
+</br>        
+      <footer class="footer">Copyright AK.<br>All rights reserved</footer>  
+    </body>
+</html>

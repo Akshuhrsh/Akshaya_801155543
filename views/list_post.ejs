@@ -1,0 +1,51 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/assets/CSS/styling1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <title>
+            Post List Page
+        </title>
+    </head>
+    <body>
+        <div class="operationresultarea">
+            <h3>Operation Result Area</h3>
+            <h4>Blog Title</h4>
+            <ol>
+                <% blogs.forEach(function(blogitem){%> 
+                    <li><%= blogitem.title %></li>
+                <% }); %>  
+            </ol>         
+        </div>
+    </br>
+    <table border="2">
+        <tr>
+            <th>
+                PostTitle
+            </th>
+            <th colspan="4">
+                Operations
+            </th>        
+        </tr>
+        <% blogs.forEach(function(blogitem){%>
+            <tr>
+                <td>
+                    <%= blogitem.title %>
+                </td>
+                <td>
+                    <a href="<%= blogitem.viewlink %>" class="fa fa-eye" style="font-size:24px; color: black;">                
+                </td>
+                <td>
+                    <a href="<%= blogitem.editlink %>" class="fa fa-edit" style="font-size:24px; color: black";>
+                </td>
+                <td>
+                <a href="<%= blogitem.deletelink %>"  class="fa fa-trash" style="font-size:24px; color: black";>
+                </td>
+                <td>
+                   <i class="fa fa-toggle-on" style="font-size:24px; color: black" ></i><                 
+                </td>
+            </tr> 
+          <% }); %>        
+    </table>
+    </body>
+</html>

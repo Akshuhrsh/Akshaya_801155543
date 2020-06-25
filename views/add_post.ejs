@@ -1,0 +1,34 @@
+<html lang="en">  
+    
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/AJAX/add_blog_post.js"></script>
+        <script type="text/javascript" src="/JAVASCRIPT/file_validation.js"></script>
+        <link rel="stylesheet" type="text/css" href="/assets/CSS/styling1.css">
+        <title>Add Post Page</title>  
+        <meta name="viewport" content="width=device-width, initial-scale=1">      
+    </head>
+    <body class="bodybackground">
+        <form enctype="multipart/form-data" >
+            <div class="inputContainer">
+            <label><b>Post Title</b></label></br>
+            </br>
+            <input name="title" id="title" type="text" placeholder="Enter the title of the post">
+    </br>
+</br>
+            <label><b>Post Description</b></label>
+            </br>
+            <textarea name="description" id="description" rows="30" cols="100"></textarea>
+            </br>
+            <h4>Or</h4>
+            <label for="uploadfile">Select a text file:</label>
+            <input type="file" id="uploadfile" name="uploadfile" onchange="validateFile()"><br>
+        </br>
+            <button class="button" type="submit"><b>Add Post</b></button>
+
+            </div>
+            
+        </form>
+
+    </body>
+</html>
