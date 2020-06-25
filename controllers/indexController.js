@@ -18,7 +18,8 @@ module.exports = function(app,db){
               console.log(data);
             });
             res.render('index',{blogs: data});
-          });  
+          });        
+
     }); 
 };
     

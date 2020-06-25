@@ -28,11 +28,13 @@ app.post('/updatepost',urlencodedParser, function(req,res){
     if(err){
         console.log("Failure");
         // alert("Failure");
-        res.body ="Failure";
+        //res.send("Failure");
     } else{
         console.log("Success");
-        // alert("Success");
-       res.body = "Success";
+        // alert("Success");      
+       
+        res.send("Success");
+     
     }
     });
 });

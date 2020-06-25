@@ -1,21 +1,17 @@
 var bodyParser  = require('body-parser');
-
+var fs = require('fs');
 var urlencodedParser = bodyParser.urlencoded({extended: false});
-
-
-//var data = [{title: 'Blog 1', desc: 'Desc1 goes here'},{title: 'Blog 2', desc: 'Desc2 goes here'},{title: 'Blog 3', desc: 'Desc3 goes here'}];
+const fileUpload = require('express-fileupload');
 
 
 module.exports = function(app,db){
-
 app.get('/addpost',function(req,res){
     res.render('add_post');
 });
 
-app.post('/addpost',urlencodedParser,function(req,res){
-    console.log(req.body.title);
-    console.log(req.body.desc);
-db.run('Insert into BLOG (Title,Desc) VALUES(?,?)',[req.body.title,req.body.desc],(err)=>{
+app.post('/addpost',urlencodedParser,function(req,res){  
+    console.log(req.body.title+ " " +req.body.desc)  ;
+    db.run('Insert into BLOG (Title,Desc) VALUES(?,?)',[req.body.title,req.body.desc],(err)=>{
     if(err){
         console.log(err);
     } else{
@@ -24,8 +20,24 @@ db.run('Insert into BLOG (Title,Desc) VALUES(?,?)',[req.body.title,req.body.desc
 });
 });
 
-app.put('/addpost',function(req,res){
-   // res.render('post');
+app.post('/addpostFile',urlencodedParser,function(req,res){  
+    console.log("in addpost",req.body.title)  ;
+    console.log("File data",req.body.desc)
+    res.send("success")
+
+    //fs.readFile(req.body.desc, (err, data) => { 
+      //  if (err) throw err; 
+      //  db.run('Insert into BLOG (Title,Desc) VALUES(?,?)',[req.body.title,data.toString()],(err)=>{
+            // if(err){
+            //     console.log(err);
+            // } else{
+            //     console.log("Insert Successful");
+            // }});
+        
 });
+
+// app.put('/addpost',function(req,res){
+//    // res.render('post');
+// });
 
 };

@@ -1,5 +1,7 @@
 var express = require('express');
+
 const sqllite = require('sqlite3').verbose();
+
 
 var postController = require('./controllers/postController');
 var indexController = require('./controllers/indexController');
@@ -7,7 +9,6 @@ var addpostController = require('./controllers/addpostController');
 var listpostController = require('./controllers/listpostController');
 var updatepostController = require('./controllers/updatepostController');
 var deletepostController = require('./controllers/deletepostController');
-
 
 // db connection creation
 
@@ -36,6 +37,7 @@ addpostController(app,db);
 listpostController(app,db);
 updatepostController(app,db);
 deletepostController(app,db);
+
 
 //listen to port
 app.listen(3000);
