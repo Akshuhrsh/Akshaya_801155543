@@ -12,12 +12,12 @@ var deletepostController = require('./controllers/deletepostController');
 
 // db connection creation
 
-let db = new sqllite.Database('nodejsdb.db', (err) => {
-    if (err) {
-      return console.error(err.message);
-    }
-    console.log('Connected to the SQlite database.');
-  });
+let db_blog = new sqllite.Database('blog.db', (err) => {
+  if (err) {
+    return console.error(err.message);
+  }
+  console.log('Connected to SQlite database.');
+});
 
 var app = express();
 
@@ -31,12 +31,12 @@ app.use('/AJAX',express.static('AJAX'));
 
 //fire contollers
 
-postController(app,db);
-indexController(app,db);
-addpostController(app,db);
-listpostController(app,db);
-updatepostController(app,db);
-deletepostController(app,db);
+postController(app,db_blog);
+indexController(app,db_blog);
+addpostController(app,db_blog);
+listpostController(app,db_blog);
+updatepostController(app,db_blog);
+deletepostController(app,db_blog);
 
 
 //listen to port

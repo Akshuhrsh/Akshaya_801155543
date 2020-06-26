@@ -9,8 +9,7 @@
     </head>
     <body>
         <nav class="topright">
-        <a class="anchor" onclick=fontResizer()>Font Resizer</a>
-        <a href="">Admin Login</a>            
+        <a class="anchor" onclick=fontResizer()>Font Resizer</a>                    
         </nav>
     </br> 
     <div>
@@ -19,28 +18,26 @@
         <button id="stylebtn1" class="stylebutton1" onclick="styleSwitcher1()">style1</button>
         <button id="stylebtn2" class="stylebutton2" onclick="styleSwitcher2()">style2</button>
         <button id="stylebtn3" class="stylebutton3" onclick="styleSwitcher3()">style3</button>
-    </div>       
-<div class="slide">
+    </div> 
+    <div class="functionalities">    
+        <a href="addpost">Add New Post</a>
+        <br>
+        <br>
+        <a href="listpost">View Post List</a>  
+        <br>
+    </div>      
+<div class="slide">    
     <button onclick="startSlideshow()">Play Slides</button>
-    <button onclick="stopSlideshow()">Stop Slides</button>
+    <button onclick="stopSlideshow()">Stop Slides</button>    
 </div>
+
 <div>
+    <% blogs.forEach(function(blogitem){%>
     <article class="blogarticle">
-        <a href="<%=blogs[0].link %>"><%= blogs[0].title %></a> 
-        <p id="para1"><%= blogs[0].desc %></p>
+        <a href="<%=blogitem.link %>"><%= blogitem.title %></a> 
+        <p id="para1"><%= blogitem.desc %></p>
      </article></br>
-     <article class="blogarticle">
-         <a href="<%=blogs[1].link %>"><%= blogs[1].title %></a>     
-         <p><%= blogs[1].desc %></p>    
-     </article></br>
-     <article class="blogarticle">
-         <a href="<%=blogs[2].link %>"><%= blogs[2].title %></a>
-         <p><%= blogs[2].desc %></p>
-     </article></br>
-     <article class="blogarticle">
-         <a href="<%=blogs[3].link %>"><%= blogs[3].title %></a> 
-         <p><%= blogs[3].desc %></p>
-     </article>
+     <% }); %>
 </div>
 </br>        
       <footer class="footer">Copyright AK.<br>All rights reserved</footer>  

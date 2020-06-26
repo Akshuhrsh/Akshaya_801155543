@@ -2,8 +2,7 @@ $(document).ready(function(){
     $('form').on('submit', function(e){  
       e.preventDefault();      
         var title = $('#title');
-        var desc = $('#description');
-          console.log("In elseeee");
+        var desc = $('#description');          
             var blog = {title: title.val(),desc: desc.val()};
             $.post("/addpost",blog, function(data){
               alert("Record updated Successfully");

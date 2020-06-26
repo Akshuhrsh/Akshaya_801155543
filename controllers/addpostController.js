@@ -11,8 +11,8 @@ app.post('/addpost',urlencodedParser,function(req,res){
     if(err){
         console.log(err);
     } else{
-        console.log("Insert Successful");
-        res.send("success");
+        console.log("Insert Successful");        
+        res.send("success");        
     }
 });
 });
