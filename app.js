@@ -10,7 +10,6 @@ var listpostController = require('./controllers/listpostController');
 var updatepostController = require('./controllers/updatepostController');
 var deletepostController = require('./controllers/deletepostController');
 
-var adduserController = require('./controllers/adduserController');
 var listuserController = require('./controllers/listuserController');
 
 // db connection creation
@@ -41,7 +40,6 @@ listpostController(app,db);
 updatepostController(app,db);
 deletepostController(app,db);
 
-adduserController(app,db);
 listuserController(app,db);
 
 //listen to port
