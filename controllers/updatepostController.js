@@ -1,5 +1,4 @@
 var bodyParser  = require('body-parser');
-
 var urlencodedParser = bodyParser.urlencoded({extended: false});
 
 
@@ -26,20 +25,12 @@ app.get('/updatepost',function(req,res){
 app.post('/updatepost',urlencodedParser, function(req,res){        
    db.run('Update BLOG set Title = ? , Desc = ? where id= ?',[req.body.title,req.body.desc,blogId],(err)=>{
     if(err){
-        console.log("Failure");
-        // alert("Failure");
-        //res.send("Failure");
+        console.log("Failure");        
     } else{
         console.log("Success");
-        // alert("Success");      
-       
         res.send("Success");
-     
     }
     });
 });
-// app.put('/updatepost',function(req,res){
-//    // res.render('post');
-// });
 
 };
