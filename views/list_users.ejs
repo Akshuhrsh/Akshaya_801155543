@@ -9,7 +9,13 @@
     </head>
     <body>
         <div class="operationresultarea">
-            <h2>Operation Result Area</h2>
+            <h3>Operation Result Area</h3>
+            <h4>Blog Users</h4>
+            <ol>
+                <% blogs.forEach(function(blogitem){%> 
+                    <li><%= blogitem.username %></li>
+                <% }); %>  
+            </ol>
         </div>
     </br>
     <table border=2>
@@ -21,20 +27,22 @@
                 Operations
             </th>        
         </tr>
+        <% blogs.forEach(function(blogitem){%>
         <tr>
             <td>
-                User
+                <%= blogitem.username %>
             </td>
             <td>
-                <a href="update_user.html"  class="fa fa-edit" style="font-size:24px; color: black";>               
+                <a href="<%= blogitem.editlink %>"  class="fa fa-edit" style="font-size:24px; color: black";>               
             </td>
             <td>
-                <i class="fa fa-trash" style="font-size:24px; color: black";></i>
+               <a href="<%=blogitem.deletelink %>" class="fa fa-trash" style="font-size:24px; color: black";>
             </td>
             <td>
                 <i class="fa fa-toggle-on" style="font-size:24px; color: black";></i>               
             </td>
         </tr>
+        <% }); %> 
     </table>
     </body>
 

@@ -22,7 +22,7 @@ app.post('/addpost',urlencodedParser,function(req,res){
 
 app.post('/addpostFile',urlencodedParser,function(req,res){  
     console.log("in addpost",req.body.title)  ;
-    console.log("File data",req.body.desc)
+    console.log("File data",req.body.desc);
     res.send("success")
 
     //fs.readFile(req.body.desc, (err, data) => { 
