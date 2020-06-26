@@ -8,22 +8,31 @@
         </title>
     </head>
     <body>
+        <nav class="nav">
+            <a href="index" class="anchor">Go To Home</a>                    
+            </nav>
         <div class="operationresultarea">
-            <h3>Operation Result Area</h3>
-            <h4>Blog Title</h4>
-            <ol>
+            <h3>Operation Result Area</h3>            
+            <table class="table1" border="2">
+                <tr>
+                    <th colspan="1">Blog Post Items</th>
+                </tr>
                 <% blogs.forEach(function(blogitem){%> 
-                    <li><%= blogitem.title %></li>
-                <% }); %>  
-            </ol>         
+                    <tr>
+                        <td>
+                            <%= blogitem.title %>
+                        </td>
+                    </tr>
+                <% }); %>
+            </table> 
         </div>
     </br>
-    <table border="2">
+    <table class="table2" border="2">
         <tr>
             <th>
                 PostTitle
             </th>
-            <th colspan="4">
+            <th colspan="3">
                 Operations
             </th>        
         </tr>
@@ -40,10 +49,7 @@
                 </td>
                 <td>
                 <a href="<%= blogitem.deletelink %>"  class="fa fa-trash" style="font-size:24px; color: black";>
-                </td>
-                <td>
-                   <i class="fa fa-toggle-on" style="font-size:24px; color: black" ></i>                 
-                </td>
+                </td>                
             </tr> 
           <% }); %>        
     </table>

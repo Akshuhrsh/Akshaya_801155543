@@ -3,23 +3,18 @@
 
 module.exports = function(app,db){
     var data=[];
-
     app.get('/index',function(req,res){        
         db.all(sql, [], (err, rows) => {
             if (err) {
               throw err;
             }
-            rows.forEach((row) => {
-                console.log("inside for each");
-                console.log(row);               
-              console.log(row.Id+row.Title+ row.Desc);
-             var blog= {Id: row.Id,title:row.Title,desc:row.Desc,link:'post?id='+row.Id};
-              console.log(data.push(blog)); 
-              console.log(data);
+            rows.forEach((row) => {                              
+             var blog= {Id: row.Id,title:row.Title,desc:row.Desc,link:'post?id='+row.Id};             
+              data.push(blog);            
             });
             res.render('index',{blogs: data});
-          });        
-
+            data=[];
+          });
     }); 
 };
     
