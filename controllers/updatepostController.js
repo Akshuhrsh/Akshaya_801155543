@@ -32,5 +32,4 @@ app.post('/updatepost',urlencodedParser, function(req,res){
     }
     });
 });
-
 };
