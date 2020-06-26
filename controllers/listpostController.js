@@ -2,8 +2,6 @@ let sql = `SELECT Id,Title,Desc FROM BLOG`;
 
 module.exports = function(app,db){
     var data=[];
-    console.log(data);
-
     app.get('/listpost',function(req,res){
         db.all(sql, [], (err, rows) => {
             if (err) {
