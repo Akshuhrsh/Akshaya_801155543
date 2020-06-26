@@ -32,7 +32,6 @@ module.exports = function(app,db){
     });
 
     app.post("/api/user",urlencodedParser,jsonDependency,(req, res) => {
-        console.log(req.body);
         var errors=[];
         if (!req.body.password){
             errors.push("Password not entered");
